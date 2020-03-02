@@ -33,7 +33,6 @@ struct ContentView: View {
                     if self.showMenu {
                         MenuView()
                             .animation(Animation.easeOut(duration: self.duration).delay(0.0))
-                        
                             .frame(width: geometry.size.width/2)
                             .transition(.move(edge: .leading))
                     }
@@ -49,6 +48,7 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "line.horizontal.3")
                             .imageScale(.large)
+                            .frame(width: 40, height: 40) // makes hit area larger.
                     }
                 ))
         }
